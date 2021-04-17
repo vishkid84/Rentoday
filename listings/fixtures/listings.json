@@ -1,0 +1,49 @@
+[{
+        "pk": 1,
+        "model": "listings.listing",
+        "fields": {
+            "listing_name": "Listing by Merc",
+            "price": "€2,325 per month",
+            "short_description": "3 bedroom 2 storey semi-detached house, U Citywest Demesne, Citywest, Co. Dublin",
+            "description": "U Citywest Demesne is a fabulous development of luxury new homes, located beside numerous amenities & schools. The redbrick Edwardian style houses take their inspiration from Dublin's redbrick streetscapes, and the Demesne has a beautiful landscaped 'village green' at the heart of the estate. The 3 & 4 bedroom homes are all generously proportioned and are fully finished with high quality kitchens (including appliances) and bathrooms. The quality finish is complimented by bespoke U furniture and finishes throughout.",
+            "bedroom": 3,
+            "bathroom": 3,
+            "lease": "Minimum 1 Year",
+            "category": 1,
+            "image_url": "",
+            "image": "Merc_listing.jpg"
+        }
+    },
+    {
+        "pk": 2,
+        "model": "listings.listing",
+        "fields": {
+            "listing_name": "Listing by BMW",
+            "price": "€2,425 per month",
+            "short_description": "3-Bed Townhouses, Opus, 6 Hanover Quay, Hanover Quay, Dublin 2",
+            "description": "Savills is delighted to present Opus at 6 Hanover Quay in the centre of Dublin's Docklands to the rental market. Set apart from all other residential offerings in the city at present, Opus at 6 Hanover Quay offers residents a unique living experience in this striking building featuring 120 individual homes. Living at Opus will offer residents a range of exclusive amenities and a level of service that is second to none.",
+            "bedroom": 3,
+            "bathroom": 3,
+            "lease": "Minimum 1 Year",
+            "category": 2,
+            "image_url": "",
+            "image": "BMW_lising.jpg"
+        }
+    },
+    {
+        "pk": 3,
+        "model": "listings.listing",
+        "fields": {
+            "listing_name": "Listing by Audi",
+            "price": "€490 per month",
+            "short_description": "Twin Bed Sharing, Archway Court, 39A Mountjoy Street, Dublin 7",
+            "description": "Twin Single Sharing Room for rent at Archway Court Shared Student Accommodation complex. Each room contains two single beds.  The house has an open-plan shared sitting and dining area, with a fully fitted kitchen, spacious bedrooms, and a number of bathrooms.",
+            "bedroom": 3,
+            "bathroom": 3,
+            "lease": "Minimum 1 Year",
+            "category": 2,
+            "image_url": "",
+            "image": "Audi_lising.jpg"
+        }
+    }
+]

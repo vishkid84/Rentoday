@@ -1,0 +1,141 @@
+[{
+        "pk": 1,
+        "model": "listings.category",
+        "fields": {
+            "name": "D1"
+        }
+    },
+    {
+        "pk": 2,
+        "model": "listings.category",
+        "fields": {
+            "name": "D2"
+        }
+    },
+    {
+        "pk": 3,
+        "model": "listings.category",
+        "fields": {
+            "name": "D3"
+        }
+    },
+    {
+        "pk": 4,
+        "model": "listings.category",
+        "fields": {
+            "name": "D4"
+        }
+    },
+    {
+        "pk": 5,
+        "model": "listings.category",
+        "fields": {
+            "name": "D5"
+        }
+    },
+    {
+        "pk": 6,
+        "model": "listings.category",
+        "fields": {
+            "name": "D6"
+        }
+    },
+    {
+        "pk": 7,
+        "model": "listings.category",
+        "fields": {
+            "name": "D7"
+        }
+    },
+    {
+        "pk": 8,
+        "model": "listings.category",
+        "fields": {
+            "name": "D8"
+        }
+    },
+    {
+        "pk": 9,
+        "model": "listings.category",
+        "fields": {
+            "name": "D9"
+        }
+    },
+    {
+        "pk": 10,
+        "model": "listings.category",
+        "fields": {
+            "name": "D10"
+        }
+    },
+    {
+        "pk": 11,
+        "model": "listings.category",
+        "fields": {
+            "name": "D11"
+        }
+    },
+    {
+        "pk": 12,
+        "model": "listings.category",
+        "fields": {
+            "name": "D12"
+        }
+    },
+    {
+        "pk": 13,
+        "model": "listings.category",
+        "fields": {
+            "name": "D13"
+        }
+    },
+    {
+        "pk": 14,
+        "model": "listings.category",
+        "fields": {
+            "name": "D14"
+        }
+    },
+    {
+        "pk": 15,
+        "model": "listings.category",
+        "fields": {
+            "name": "D15"
+        }
+    },
+    {
+        "pk": 16,
+        "model": "listings.category",
+        "fields": {
+            "name": "D16"
+        }
+    },
+    {
+        "pk": 17,
+        "model": "listings.category",
+        "fields": {
+            "name": "D17"
+        }
+    },
+    {
+        "pk": 18,
+        "model": "listings.category",
+        "fields": {
+            "name": "D18"
+        }
+    },
+    {
+        "pk": 19,
+        "model": "listings.category",
+        "fields": {
+            "name": "D19"
+        }
+    },
+    {
+        "pk": 20,
+        "model": "listings.category",
+        "fields": {
+            "name": "D20"
+        }
+    }
+]
