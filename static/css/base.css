@@ -1,0 +1,25 @@
+.title-box {
+    height: 50vh;
+}
+
+.title-box h1 {
+    text-align: center;
+    position: relative;
+    top: 65%;
+    -ms-transform: translateY(-65%);
+    -webkit-transform: translateY(-65%);
+    transform: translateY(-65%);
+}
+
+.title-box h4 {
+    text-align: center;
+    position: relative;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.bold-title {
+    font-weight: bold;
+}
