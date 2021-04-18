@@ -52,7 +52,7 @@
 
     <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-white">
         <div class="container-fluid">
-            <a class="navbar-brand" href="">RENToday</a>
+            <a class="navbar-brand montserrat-bold" href="">RENToday</a>
             <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -70,9 +70,10 @@
                     <li class="nav-item ">
                         <a class="nav-link" href="">Contact</a>
                     </li>
+
                     {% if request.user.is_authenticated %}
                     <li class="nav-item ">
-                        <a href="" class="dropdown-item">Add listing</a>
+                        <a class="nav-link" href="">Add listing</a>
                     </li>
                     <li class="nav-item {% if 'accounts/logout/' in request.path %}active{% endif %}">
                         <a class="nav-link" href="{% url 'account_logout' %}">Logout</a>
