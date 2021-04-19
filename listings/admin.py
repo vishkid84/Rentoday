@@ -9,6 +9,7 @@ class ListingAdmin(admin.ModelAdmin):
         'price',
         'short_description',
         'image',
+        'date',
     )
 
     ordering = ('date',)

@@ -1,5 +1,5 @@
 .top-container {
-    padding-top: 65px;
+    padding-top: 56px;
 }
 
 .montserrat-bold {
@@ -7,8 +7,16 @@
     font-weight: 800;
 }
 
+.montserrat {
+    font-family: 'Montserrat', sans-serif;
+}
+
 .bg-green {
     background-color: #3AAFA9;
+}
+
+.bg-darkest {
+    background-color: #17252A;
 }
 
 .bg-lightgrey {
@@ -44,4 +52,21 @@
 
 .bold-title {
     font-weight: bold;
+}
+
+/* ------Listings----------- */
+.carousel-container {
+    margin-top: 55px;
+}
+
+.carousel-inner,
+.carousel-item {
+    width: 100%;
+    height: 50vh !important;
+}
+
+.carousel-item img {
+    height: inherit;
+    object-fit: cover;
+    object-position: 50% 50%;
 }

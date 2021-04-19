@@ -11,16 +11,16 @@
                 <div class="col-md-6 col-lg-4 col-xl-3 mt-4">
                     <div class="card h-100 border-0 bg-light">
                         {% if listing.image %}
-                        <img class="card-img-top img-fluid" src="{{ listing.image.url }}" alt="">
+                        <a href="{% url 'listing_detail' listing.id %}"><img class="card-img-top img-fluid"
+                                src="{{ listing.image.url }}" alt=""></a>
                         {% else %}
-                        <img class="card-img-top img-fluid"
-                            src="https://dummyimage.com/600x400/343a40/fafafa&text=No+image+found"
-                            alt="{{ listing.name }}">
+                        <a href="{% url 'listing_detail' listing.id %}"><img class="card-img-top img-fluid"
+                                src="https://dummyimage.com/600x400/343a40/fafafa&text=No+image+found"
+                                alt="{{ listing.name }}"></a>
                         {% endif %}
                         <div class="card-body pb-0">
                             <p class="montserrat-bold mb-1">{{ listing.price }}</p>
                             <p>{{ listing.listing_name }}</p>
-                            <a href="{% url 'listing_detail' listing.id %}">Click for more</a>
                         </div>
                     </div>
 
