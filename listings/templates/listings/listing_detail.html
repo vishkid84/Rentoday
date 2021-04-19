@@ -1,0 +1,90 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+
+<div class="container-fluid top-container bg-lightgrey pb-3 full-height">
+    <div class="row">
+        <div class="col-10 offset-1 listings-container">
+            <div class="row">
+                {% for listing in listings %}
+                <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner">
+
+                        {% if listing.image %}
+                        <div class="carousel-item active">
+                            <img class="d-block w-100" src="{{ listing.image.url }}" alt="First slide">
+                        </div>
+                        {% else %}
+                        <div class="carousel-item active">
+                            <img class="d-block w-100"
+                                src="https://dummyimage.com/600x400/343a40/fafafa&text=No+image+found"
+                                alt="First slide">
+                        </div>
+                        {% endif %}
+
+                        {% if listing.image_one %}
+                        <div class="carousel-item active">
+                            <img class="d-block w-100" src="{{ listing.image_one.url }}" alt="Second slide">
+                        </div>
+                        {% endif %}
+
+                        {% if listing.image_two %}
+                        <div class="carousel-item active">
+                            <img class="d-block w-100" src="{{ listing.image_two.url }}" alt="Third slide">
+                        </div>
+                        {% endif %}
+
+                        {% if listing.image_three %}
+                        <div class="carousel-item active">
+                            <img class="d-block w-100" src="{{ listing.image_three.url }}" alt="Fourth slide">
+                        </div>
+                        {% endif %}
+
+                        {% if listing.image_four %}
+                        <div class="carousel-item active">
+                            <img class="d-block w-100" src="{{ listing.image_four.url }}" alt="Fifth slide">
+                        </div>
+                        {% endif %}
+
+                        {% if listing.image_five %}
+                        <div class="carousel-item active">
+                            <img class="d-block w-100" src="{{ listing.image_five.url }}" alt="Sixth slide">
+                        </div>
+                        {% endif %}
+
+                        {% if listing.image_six %}
+                        <div class="carousel-item active">
+                            <img class="d-block w-100" src="{{ listing.image_six.url }}" alt="Seventh slide">
+                        </div>
+                        {% endif %}
+
+                        {% if listing.image_seven %}
+                        <div class="carousel-item active">
+                            <img class="d-block w-100" src="{{ listing.image_seven.url }}" alt="Eighth slide">
+                        </div>
+                        {% endif %}
+
+
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+
+                <div class="row">
+                    <div class="col">
+                        <p> {{ listing.listing_name }} </p>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

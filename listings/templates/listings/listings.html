@@ -20,6 +20,7 @@
                         <div class="card-body pb-0">
                             <p class="montserrat-bold mb-1">{{ listing.price }}</p>
                             <p>{{ listing.listing_name }}</p>
+                            <a href="{% url 'listing_detail' listing.id %}">Click for more</a>
                         </div>
                     </div>
 

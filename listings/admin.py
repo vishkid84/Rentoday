@@ -17,7 +17,10 @@ class ListingAdmin(admin.ModelAdmin):
 class CategoryAdmin(admin.ModelAdmin):
     list_display = (
         'name',
+        'order_by',
     )
+
+    ordering = ('order_by',)
 
 
 admin.site.register(Listing, ListingAdmin)

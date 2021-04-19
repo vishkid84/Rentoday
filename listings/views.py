@@ -15,3 +15,14 @@ def listings(request):
     }
 
     return render(request, template, context)
+
+
+def listing_detail(request, listing_id):
+    listing = get_object_or_404(Listing, pk=listing_id)
+
+    template = 'listings/listing_detail.html'
+    context = {
+        'listing': listing,
+    }
+
+    return render(request, template, context)
