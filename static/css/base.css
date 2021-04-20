@@ -70,3 +70,38 @@
     object-fit: cover;
     object-position: 50% 50%;
 }
+
+
+/* ------Allauth form formatting--------- */
+
+.allauth-form-inner-content p {
+    margin-top: 1.5rem;
+    color: #6c757d;
+}
+
+.allauth-form-inner-content .textinput {
+    margin: 10px 0;
+    box-sizing: border-box;
+    height: 40px;
+    padding: 10px 12px;
+    border: 1px solid #3AAFA9;
+    background-color: white;
+    width: 100%;
+    box-shadow: 0 1px 3px 0 #e6ebf1;
+    -webkit-transition: box-shadow 150ms ease;
+    transition: box-shadow 150ms ease;
+}
+
+.allauth-form-inner-content label {
+    margin: 10px 0 0 0;
+}
+
+.allauth-form-inner-content input:focus {
+    box-shadow: 0 1px 3px 0 #cfd7df;
+    border-color: #80bdff;
+}
+
+.allauth-form-inner-content .btn {
+    width: 120px;
+    margin-top: 15px;
+}
