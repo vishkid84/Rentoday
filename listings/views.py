@@ -1,15 +1,19 @@
 from django.shortcuts import render, get_object_or_404, redirect, reverse
 from django.contrib import messages
 from django.db.models import Q
+from django.contrib.auth.decorators import login_required
+
 
 from .models import Listing
 from .forms import ListingForm
+from django.contrib.auth.models import User
 
 # Create your views here.
 
 
 def listings(request):
     listings = Listing.objects.all().order_by('-date')
+    latest = Listing.objects.order_by('-date')[0:3]
     query = None
 
     if request.GET:
@@ -44,12 +48,48 @@ def listing_detail(request, listing_id):
     return render(request, template, context)
 
 
+@login_required
 def add_listing(request):
-    form = ListingForm(request.POST or None)
+    if request.method == 'POST':
+        form = ListingForm(request.POST, request.FILES)
+        if form.is_valid():
+            listing = form.save()
+            messages.success(request, 'Successfully added new listing')
+            return redirect(reverse('listing_detail', args=[listing.id]))
+        else:
+            messages.error(
+                request, 'Failed to add new. Please ensure the form is valid.')
+    else:
+        form = ListingForm()
 
     template = 'listings/add_listing.html'
 
     context = {
+        'form': form,
+    }
+
+    return render(request, template, context)
+
+
+@login_required
+def edit_listing(request, listing_id):
+    listing = get_object_or_404(Listing, pk=listing_id)
+    if request.method == 'POST':
+        form = ListingForm(request.POST, request.FILES, instance=listing)
+        if form.is_valid:
+            form.instance.user = request.user
+            form.save()
+            messages.success(request, 'Successfully updated the listing')
+            return redirect(reverse('listing_detail', args=[listing.id]))
+        else:
+            messages.error(
+                request, 'Failed to update. Please ensure the form is valid.')
+    else:
+        form = ListingForm(instance=listing)
+
+    template = 'listings/edit_listing.html'
+    context = {
+        'listing': listing,
         'form': form,
     }
 

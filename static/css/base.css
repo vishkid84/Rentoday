@@ -73,13 +73,13 @@
 
 /* ------Add listing----------- */
 
-.add-listing-form p {
+.listing-form p {
     margin-top: 1.5rem;
     color: #6c757d;
 }
 
-.add-listing-form .textinput,
-.add-listing-form .select {
+.listing-form .textinput,
+.listing-form .select {
     margin: 10px 0;
     box-sizing: border-box;
     height: 40px;
@@ -92,7 +92,7 @@
     transition: box-shadow 150ms ease;
 }
 
-.add-listing-form .textarea {
+.listing-form .textarea {
     margin: 10px 0;
     box-sizing: border-box;
     padding: 10px 12px;
@@ -102,6 +102,19 @@
     box-shadow: 0 1px 3px 0 #e6ebf1;
     -webkit-transition: box-shadow 150ms ease;
     transition: box-shadow 150ms ease;
+}
+
+.listing-form #div_id_image,
+.listing-form #div_id_image_one,
+.listing-form #div_id_image_two,
+.listing-form #div_id_image_three,
+.listing-form #div_id_image_four,
+.listing-form #div_id_image_five,
+.listing-form #div_id_image_six,
+.listing-form #div_id_image_seven {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #adb5bd;
 }
 
 
