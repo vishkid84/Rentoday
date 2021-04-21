@@ -71,6 +71,39 @@
     object-position: 50% 50%;
 }
 
+/* ------Add listing----------- */
+
+.add-listing-form p {
+    margin-top: 1.5rem;
+    color: #6c757d;
+}
+
+.add-listing-form .textinput,
+.add-listing-form .select {
+    margin: 10px 0;
+    box-sizing: border-box;
+    height: 40px;
+    padding: 10px 12px;
+    border: 1px solid #3AAFA9;
+    background-color: white;
+    width: 100%;
+    box-shadow: 0 1px 3px 0 #e6ebf1;
+    -webkit-transition: box-shadow 150ms ease;
+    transition: box-shadow 150ms ease;
+}
+
+.add-listing-form .textarea {
+    margin: 10px 0;
+    box-sizing: border-box;
+    padding: 10px 12px;
+    border: 1px solid #3AAFA9;
+    background-color: white;
+    width: 100%;
+    box-shadow: 0 1px 3px 0 #e6ebf1;
+    -webkit-transition: box-shadow 150ms ease;
+    transition: box-shadow 150ms ease;
+}
+
 
 /* ------Allauth form formatting--------- */
 

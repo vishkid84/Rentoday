@@ -3,6 +3,7 @@ from django.contrib import messages
 from django.db.models import Q
 
 from .models import Listing
+from .forms import ListingForm
 
 # Create your views here.
 
@@ -38,6 +39,18 @@ def listing_detail(request, listing_id):
     template = 'listings/listing_detail.html'
     context = {
         'listing': listing,
+    }
+
+    return render(request, template, context)
+
+
+def add_listing(request):
+    form = ListingForm(request.POST or None)
+
+    template = 'listings/add_listing.html'
+
+    context = {
+        'form': form,
     }
 
     return render(request, template, context)
