@@ -53,6 +53,7 @@ def add_listing(request):
     if request.method == 'POST':
         form = ListingForm(request.POST, request.FILES)
         if form.is_valid():
+            form.instance.user = request.user
             listing = form.save()
             messages.success(request, 'Successfully added new listing')
             return redirect(reverse('listing_detail', args=[listing.id]))
@@ -74,16 +75,22 @@ def add_listing(request):
 @login_required
 def edit_listing(request, listing_id):
     listing = get_object_or_404(Listing, pk=listing_id)
+    if request.user != listing.user:
+        messages.error(
+            request, 'Sorry, you dont have the permission to do that.')
+        return redirect(reverse('home'))
+
     if request.method == 'POST':
-        form = ListingForm(request.POST, request.FILES, instance=listing)
-        if form.is_valid:
-            form.instance.user = request.user
-            form.save()
-            messages.success(request, 'Successfully updated the listing')
-            return redirect(reverse('listing_detail', args=[listing.id]))
-        else:
-            messages.error(
-                request, 'Failed to update. Please ensure the form is valid.')
+        if request.user == listing.user:
+            form = ListingForm(request.POST, request.FILES, instance=listing)
+            if form.is_valid:
+                form.instance.user = request.user
+                form.save()
+                messages.success(request, 'Successfully updated the listing')
+                return redirect(reverse('listing_detail', args=[listing.id]))
+            else:
+                messages.error(
+                    request, 'Failed to update. Please ensure the form is valid.')
     else:
         form = ListingForm(instance=listing)
 
@@ -94,3 +101,12 @@ def edit_listing(request, listing_id):
     }
 
     return render(request, template, context)
+
+
+@login_required
+def delete_listing(request, listing_id):
+    ''' Logged in user can delete their comment if any'''
+    listing = get_object_or_404(Listing, pk=listing_id)
+    listing.delete()
+    messages.success(request, 'Listing deleted')
+    return redirect(reverse('listings'))
