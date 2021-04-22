@@ -95,7 +95,6 @@
                         </div>
                     </div>
                 </form>
-                {{user.username}}
             </div>
         </div>
     </nav>
@@ -126,6 +125,9 @@
     {% endblock %}
 
     {% block postloadjs %}
+    <script>
+        $('.toast').toast('show');
+    </script>
     {% endblock %}
 
 </body>

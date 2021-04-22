@@ -150,3 +150,12 @@
 .allauth-form-inner-content .btn {
     margin-top: 15px;
 }
+
+/* -----------bootstrap toasts----------- */
+
+.message-container {
+    position: fixed;
+    top: 85px;
+    right: 35px;
+    z-index: 999999;
+}

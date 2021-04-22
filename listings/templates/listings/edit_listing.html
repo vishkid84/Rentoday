@@ -13,7 +13,7 @@
                     enctype="multipart/form-data">
                     {% csrf_token %}
                     {{form|crispy}}
-                    <input type="submit" class="btn btn-info mt-4 mb-5 edit-listing" value="Edit Listing">
+                    <input type="submit" class="btn btn-info mt-4 mb-5 edit-listing" value="Update Listing">
                     <a href="{% url 'listings' %}" class="btn btn-secondary mt-4 mb-5 ml-3">Cancel</a>
                 </form>
             </div>
