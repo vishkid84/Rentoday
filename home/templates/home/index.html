@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block content %}
-<div class="container-fluid home-container height-fill">
+<div class="container-fluid home-container">
 
     <div class="row">
         <div class="col-lg-12 title-box bg-green text-center p-5">
@@ -12,10 +12,34 @@
     </div>
 
     <div class="row">
-        <div class="col-lg-12 title-box bg-lightgrey">
-            <h4>Latest listings</h4>
+        <div class="col-10 offset-1 listings-container">
+            <div class="row">
+                <div class="col">
+                    <h4 class="pb-2 mt-3 montserrat-bold text-center">Latest Listings</h4>
+                </div>
+            </div>
+            <div class="row">
+                {% for listing in listings %}
+                <div class="col-md-6 col-lg-4 mb-5">
+                    <div class="card h-100 border-0 bg-light">
+                        {% if listing.image %}
+                        <a href="{% url 'listing_detail' listing.id %}"><img class="card-img-top img-fluid"
+                                src="{{ listing.image.url }}" alt=""></a>
+                        {% else %}
+                        <a href="{% url 'listing_detail' listing.id %}"><img class="card-img-top img-fluid"
+                                src="https://dummyimage.com/600x400/343a40/fafafa&text=No+image+found"
+                                alt="{{ listing.name }}"></a>
+                        {% endif %}
+                        <div class="card-body pb-0">
+                            <p class="montserrat-bold mb-1">{{ listing.price }}</p>
+                            <p>{{ listing.listing_name }}</p>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
         </div>
     </div>
-
 </div>
+
 {% endblock %}

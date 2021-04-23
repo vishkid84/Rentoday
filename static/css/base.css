@@ -1,3 +1,7 @@
+body {
+    background-color: #e6eaea;
+}
+
 .top-container {
     padding-top: 56px;
 }
@@ -27,9 +31,13 @@
     min-height: 100vh;
 }
 
+.half-height {
+    min-height: 50vh;
+}
+
 /* --------Home--------- */
 .title-box {
-    height: 50vh;
+    height: calc(50vh - 68px);
 }
 
 .title-box h1 {

@@ -21,7 +21,6 @@
                         <div class="card-body pb-0">
                             <p class="montserrat-bold mb-1">{{ listing.price }}</p>
                             <p>{{ listing.listing_name }}</p>
-                            <p>{{ listing.user.username }}</p>
                             {% if listing.user.id == user.id or request.user.is_superuser %}
                             <small>
                                 <a href="{% url 'edit_listing' listing.id %}" class="mr-2 mb-3">Edit</a>
