@@ -22,7 +22,7 @@ def listings(request):
             if not query:
                 messages.error(
                     request, "You didn't enter any search criteria!")
-                return redirect(reverse('products'))
+                return redirect(reverse('listings'))
 
             queries = Q(listing_name__icontains=query) | Q(
                 description__icontains=query)
@@ -75,6 +75,7 @@ def add_listing(request):
 @login_required
 def edit_listing(request, listing_id):
     listing = get_object_or_404(Listing, pk=listing_id)
+
     if request.user != listing.user:
         messages.error(
             request, 'Sorry, you dont have the permission to do that.')

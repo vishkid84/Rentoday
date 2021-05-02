@@ -8,7 +8,7 @@
     <div class="container">
         <div class="row">
             <div class="col-10 offset-1 listings-container mt-5">
-                <h2>Edit listing</h2>
+                <h2>Add listing</h2>
                 <form method="POST" action="{% url 'add_listing' %}" class="listing-form" enctype="multipart/form-data">
                     {% csrf_token %}
                     {{form|crispy}}
